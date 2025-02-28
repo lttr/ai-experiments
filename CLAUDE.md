@@ -16,9 +16,8 @@
 ## Documentation
 
 - **Experiment README:** Include purpose, challenges, and insights
-- **AI-LOG:** Keep records of AI-assisted changes in `AI-LOG.md`, including date and name of the AI tool used
+- **AI-LOG:** Keep records of AI-assisted changes in `AI-LOG.md`, including date, name of the AI tool and AI model used
 
 ## AI Assistance
 
 When modifying experiments, preserve the distinction between start/end directories to maintain educational value.
-
