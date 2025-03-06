@@ -1,5 +1,7 @@
 # AI Experiment: Translation
 
+## Purpose
+
 This experiment is about translating text from one language to another.
 
 ## Challenges

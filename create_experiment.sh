@@ -26,7 +26,7 @@ mkdir -p "$EXPERIMENT_DIR/end"
 
 # Create README.md with template content
 cat > "$EXPERIMENT_DIR/README.md" << EOL
-# $EXPERIMENT_NAME Experiment
+# AI Experiment: $EXPERIMENT_NAME
 
 ## Purpose
 
@@ -36,29 +36,17 @@ Describe the purpose of this experiment.
 
 Outline the challenges faced during this experiment.
 
-## Insights
+## Task
 
-Document insights gained from this experiment.
+What is the specific task to be done.
 
-## Steps
+## Approach
 
-1. First step
-2. Second step
-3. ...
+How one can approach this task with AI tools.
 
-## Results
+### Prompt
 
-Describe the results of the experiment.
-EOL
-
-# Update AI-LOG.md
-TODAY=$(date +"%Y-%m-%d")
-cat >> "AI-LOG.md" << EOL
-
-## $TODAY: Created $EXPERIMENT_NAME experiment scaffold
-
-- Created directory structure for $EXPERIMENT_NAME experiment
-- Added template README.md
+An example prompt or AI tool input.
 EOL
 
 echo "Successfully created experiment: $EXPERIMENT_NAME"
