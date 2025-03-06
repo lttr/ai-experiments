@@ -1,0 +1,8 @@
+# https://aider.chat/docs/config/aider_conf.html
+
+file:
+  - AI-LOG.md
+
+read:
+  - CONVENTIONS.md
+  - README.md
