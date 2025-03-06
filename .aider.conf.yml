@@ -11,6 +11,6 @@ auto-commits: False
 
 dark-mode: True
 
-code-theme: lightbulb
+code-theme: zenburn
 
 gitignore: False
