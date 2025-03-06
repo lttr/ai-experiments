@@ -6,3 +6,5 @@ file:
 read:
   - CONVENTIONS.md
   - README.md
+
+auto-commit: false
