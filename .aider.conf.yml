@@ -7,4 +7,10 @@ read:
   - CONVENTIONS.md
   - README.md
 
-auto-commit: false
+auto-commits: False
+
+dark-mode: True
+
+code-theme: lightbulb
+
+gitignore: False
