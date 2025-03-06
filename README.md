@@ -14,18 +14,4 @@ Each experiment follows a consistent structure:
 
 ## Experiments
 
-1. **Translation** - Demonstrates how to use AI for translating content between languages.
-   - Located in: `experiments/translation/`
-   - Translates content from English to Czech
-   
-2. **Code Generation** - Shows how AI can assist in generating boilerplate code.
-   - Located in: `experiments/code-generation/`
-   
-3. **Refactoring** - Illustrates using AI to refactor and improve existing code.
-   - Located in: `experiments/refactoring/`
-   
-4. **Documentation** - Explores AI-assisted documentation generation.
-   - Located in: `experiments/documentation/`
-   
-5. **Testing** - Demonstrates AI-powered test case generation.
-   - Located in: `experiments/testing/`
+1. **Translation** - Demonstrates how to use AI for translating content in a specific format: `experiments/translation/`
