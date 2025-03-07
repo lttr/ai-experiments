@@ -19,3 +19,6 @@ Flow:
    Processing Service
 10. When Video Processing Service reports success, Content Management requests
     API Service to clean up temporary files and mark process complete
+
+Highlight the polling loop, since that is the part that might need a better
+architecture. Label it "Polling loop - needs review".

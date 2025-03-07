@@ -5,7 +5,6 @@ sequenceDiagram
     participant CS as Cloud Storage
     participant VP as Video Processing Service
 
-    CM->>CM: User uploads video
     CM->>API: Request upload URL
     API->>CS: Generate signed URL
     CS-->>API: Return signed URL
@@ -15,12 +14,18 @@ sequenceDiagram
     API->>VP: Initiate video processing
     VP-->>API: Return job ID
     API-->>CM: Return job ID
-    loop Status Check
-        CM->>API: Poll job status
-        API->>VP: Check status
+
+    rect rgb(240, 128, 128)
+    Note over CM,VP: Polling loop - needs review
+    loop Check processing status
+        CM->>API: Poll for job status
+        API->>VP: Check job status
         VP-->>API: Return status
+        API-->>CM: Return status
     end
+    end
+
     CM->>API: Request cleanup
-    API->>CS: Delete temp files
-    API-->>CM: Mark complete
+    API->>CS: Clean up temp files
+    API->>VP: Mark job complete
 ```
