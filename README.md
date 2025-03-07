@@ -14,6 +14,6 @@ Each experiment follows a consistent structure:
 
 ## Experiments
 
-1. **Translation** - Demonstrates how to use AI for translating content in a specific format: `experiments/translation/`
-
-2. **Autocomplete** - Experiments with autocomplete: `experiments/autocomplete/`
+1. [**Translation**](experiments/translation/) - Demonstrates how to use AI for translating content in a specific format
+1. [**Autocomplete**](experiments/autocomplete/) - Experiments with autocomplete
+1. [**Sequence Diagram**](experiments/sequence-diagram/) - Create a diagram for better understanding
