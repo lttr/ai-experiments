@@ -6,11 +6,3 @@ file:
 read:
   - CONVENTIONS.md
   - README.md
-
-auto-commits: False
-
-dark-mode: True
-
-code-theme: zenburn
-
-gitignore: False
