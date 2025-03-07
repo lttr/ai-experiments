@@ -1,3 +1,7 @@
 .aider.chat*
 .aider.input*
 .aider.tags*
+
+node_modules
+dist
+.pnpm-lock.yaml
