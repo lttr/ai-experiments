@@ -54,9 +54,13 @@ if [ -f "README.md" ]; then
     # Check if the Experiments section exists in README.md
     if grep -q "^## Experiments" README.md; then
         # Add the new experiment to the list
+        # Get the last experiment number
+        LAST_NUM=$(grep -A 100 "^## Experiments" README.md | grep -n "^[0-9]\+\. " | tail -1 | cut -d: -f1 | xargs -I{} grep -A 100 "^## Experiments" README.md | sed -n "{}p" | sed -E 's/^([0-9]+)\..*/\1/')
+        NEXT_NUM=$((LAST_NUM + 1))
+        
+        # Insert the new experiment with proper formatting
         sed -i "/^## Experiments/a\\
-\\
-$(( $(grep -A 100 "^## Experiments" README.md | grep -n "^[0-9]\+\. " | tail -1 | cut -d: -f1) + 1 )). **$EXPERIMENT_NAME** - Experiments with $EXPERIMENT_NAME: \`experiments/$EXPERIMENT_NAME/\`" README.md
+${NEXT_NUM}. [**${EXPERIMENT_NAME}**](experiments/${EXPERIMENT_NAME}/) - Experiments with ${EXPERIMENT_NAME}" README.md
         echo "Updated main README.md with the new experiment"
     else
         echo "Warning: Could not find '## Experiments' section in README.md"
