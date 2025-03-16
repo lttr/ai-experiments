@@ -30,7 +30,7 @@ These tools now (03/2025) have some agentic capabilities. For me the plugin
 first reads the contents of related files and then suggests multiple changes and
 new files. I can then review the changes and decide which to apply.
 
-In my case the AI tool did more chages than I asked for. It not only implemented
+In my case the AI tool did more changes than I asked for. It not only implemented
 the fetchAll endpoint but also other CRUD operations on top of the in-memory
 database. That might or might not be a good thing. The code worked without any
 manual modifications.
