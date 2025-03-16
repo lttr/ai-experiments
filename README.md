@@ -18,3 +18,4 @@ Each experiment follows a consistent structure:
 1. [**Autocomplete**](experiments/autocomplete/) - Experiments with autocomplete
 1. [**Sequence Diagram**](experiments/sequence-diagram/) - Create a diagram for better understanding
 1. [**Testing data**](experiments/testing-data/) - Generate testing data in an app
+1. [**Api docs**](experiments/api-docs/) - Generate API docs for all endpoints
