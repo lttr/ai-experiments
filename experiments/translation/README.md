@@ -22,6 +22,7 @@ copy paste the text and use a propmt like this:
 
 ### Prompt
 
+```
 Translate the text from English to Czech. Keep specific technical terms or
 domain specific jargon in English, but try to translate words that have good
 translation in target language. The text structure and formatting should be
@@ -29,3 +30,4 @@ preserved. The output should be only the markdown file contents.
 
 For Claude Chat:
 Use an artefact for the markdown.
+```

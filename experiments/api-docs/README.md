@@ -32,10 +32,12 @@ I have used Aider with Claude 3.7 model.
 
 ### Prompt
 
+```
 Generate API docs for all endpoints in the app. It is a NestJS app so please
 only use its decorators for the API docs. Generate description, code examples,
 all HTTP status code the responses might have. The app is located on path
 `experiments/api-docs/start`.
+```
 
 ### Files to include
 

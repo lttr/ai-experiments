@@ -34,5 +34,7 @@ that I can show to my colleage and discuss the solution.
 
 ### Prompt
 
+```
 Based on the given prompt, output a diagram that can be used inside a Markdown
 file. Do not output any other text.
+```

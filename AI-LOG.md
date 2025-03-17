@@ -1,5 +1,10 @@
 # A Log of AI driven changes
 
+## 2025-03-17: Updated README prompt sections
+
+- Updated all experiment README.md files to put prompt sections inside markdown code blocks
+- Improved readability and consistency of documentation
+
 ## 2025-03-06: Added TypeScript support
 
 - Added tsconfig.json with ES2024 features

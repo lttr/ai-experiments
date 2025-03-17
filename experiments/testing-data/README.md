@@ -39,5 +39,7 @@ I have used Claude 3.7 model.
 
 ### Prompt
 
+```
 Create 20 example books into a simple in-memory database and make the findAll
 endpoint return them. Create a separate service for the data.
+```
