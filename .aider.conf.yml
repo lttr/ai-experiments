@@ -1,5 +1,7 @@
 # https://aider.chat/docs/config/aider_conf.html
 
+model: sonnet
+
 file:
   - AI-LOG.md
 
