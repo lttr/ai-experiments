@@ -1,0 +1,29 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@lttr/puleo':
+        specifier: ^0.5.0
+        version: 0.5.0
+
+packages:
+
+  '@lttr/puleo@0.5.0':
+    resolution: {integrity: sha512-4vXQR1sIRQkOx5nK8dCErba9eZRw1vaxsHBDOBfaekiqLWdR7lQOpRIqkviNTI5Cz4E3/ZWLEWYdTdqejVXY3Q==}
+
+  open-props@1.7.13:
+    resolution: {integrity: sha512-A+8iJVr5oOpSrhvJMPz5KRb7ib4kav6V7+0014qpOM+rPukRxibi5BGCmwFECAz8uj6lN3pL1h7yp0ljtxqxuA==}
+
+snapshots:
+
+  '@lttr/puleo@0.5.0':
+    dependencies:
+      open-props: 1.7.13
+
+  open-props@1.7.13: {}
