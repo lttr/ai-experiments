@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateBookDto } from './dto/create-book.dto';
 import { UpdateBookDto } from './dto/update-book.dto';
 
@@ -17,10 +17,17 @@ export class BooksService {
   }
 
   update(id: number, updateBookDto: UpdateBookDto) {
+    if (this.idDoesNotExist(id)) {
+      throw new NotFoundException(`Book #${id} is not found`);
+    }
     return `This action updates a #${id} book`;
   }
 
   remove(id: number) {
     return `This action removes a #${id} book`;
+  }
+
+  private idDoesNotExist(id: number) {
+    return id <= 0;
   }
 }
