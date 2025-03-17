@@ -44,3 +44,6 @@ all HTTP status code the responses might have. The app is located on path
 ```
 /read experiments/api-docs/start/src/**/*.ts
 ```
+
+Or let Aider to take care of including all files it needs. That might slow down
+your workflow, since it has to make extra requests and ask you for permissions.
