@@ -12,7 +12,7 @@ set of conventions in the prompt.
 
 As an input I choose a component from 23rd section of the
 [Tailblocks](https://tailblocks.cc/) project. It is not super simple but also
-not too complex.
+not too complex. There are tricky sections like tabs or table though.
 
 I don't expect to have any behavior, accessibility, or other aspects of a
 component, I would rather only focus on the design in this experiment.
@@ -27,9 +27,23 @@ Generate styles for a component given an image with the component design.
 
 ## Approach
 
-I will use my CSS library and Tailwind to generate the styles and compare
-solutions.
+I will use my CSS library to generate the styles. It has a lot of build in css
+custom properties, so the tool can use them.
 
 ### Prompt
 
-An example prompt or AI tool input.
+Start Aider:
+
+```
+aider --file ./experiments/component-styles/start/index.html --read ./experiments/component-styles/start/section-23.png  --read ./experiments/component-styles/end/node_modules/@lttr/puleo/output/puleo.post.css
+```
+
+Use this prompt in Aider:
+
+```
+Generate a component based on the given image. The HTML output put into body tag
+inside index.html. The CSS put inside style tag inside index.html. Act as an
+expert coder. Prefer linked CSS library, not custom styles. Use rem values when
+there is no provided custom property in the given CSS. Pay attention to details
+like layout, what is on the left and what is on the right, or where are borders.
+```

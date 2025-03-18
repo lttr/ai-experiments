@@ -1,10 +1,177 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>Product Detail</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style></style>
+    <link
+      rel="stylesheet"
+      href="node_modules/.pnpm/@lttr+puleo@0.5.0/node_modules/@lttr/puleo/output/puleo.post.css"
+    />
+    <style>
+      .product-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-6);
+        padding: var(--space-6) 0;
+      }
+
+      .product-info {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+      }
+
+      .product-brand {
+        color: var(--text-color-2);
+        font-size: var(--font-size--1);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .product-title {
+        margin-top: var(--space-1);
+        font-size: var(--font-size-3);
+        line-height: 1.2;
+      }
+
+      .product-tabs {
+        display: flex;
+        border-bottom: var(--border-2);
+        margin-bottom: var(--space-4);
+      }
+
+      .tab {
+        padding: var(--space-3) var(--space-4);
+        cursor: pointer;
+        position: relative;
+      }
+
+      .tab.active {
+        color: var(--link-color);
+      }
+
+      .tab.active::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--link-color);
+      }
+
+      .product-description {
+        color: var(--text-color-1);
+        line-height: var(--line-height-body);
+      }
+
+      .product-attributes {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: var(--space-3);
+        margin-top: var(--space-4);
+      }
+
+      .attribute-label {
+        color: var(--text-color-2);
+      }
+
+      .product-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        margin-top: var(--space-5);
+      }
+
+      .product-price {
+        font-size: var(--font-size-2);
+        font-weight: var(--font-weight-6);
+        margin-right: var(--space-4);
+      }
+
+      .wishlist-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: var(--radius-2);
+        background-color: var(--surface-2);
+      }
+
+      @media (max-width: 768px) {
+        .product-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="p-page-layout">
+      <div class="product-container p-content">
+        <div class="product-image">
+          <img src="https://placehold.co/400x400" alt="Product Image" />
+        </div>
+
+        <div class="product-info">
+          <div>
+            <div class="product-brand">BRAND NAME</div>
+            <h1 class="product-title">Animated Night Hill Illustrations</h1>
+          </div>
+
+          <div>
+            <div class="product-tabs">
+              <div class="tab active">Description</div>
+              <div class="tab">Reviews</div>
+              <div class="tab">Details</div>
+            </div>
+
+            <div class="product-description">
+              <p>
+                Fam locavore kickstarter distillery. Mixtape chillwave tumeric
+                sriracha taximy chia microdosing tilde DIY. XOXO fam inxigo
+                juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
+                seitan poutine tumeric. Gastropub blue bottle austin listicle
+                pour-over, neutra jean.
+              </p>
+            </div>
+          </div>
+
+          <div class="product-attributes">
+            <div class="attribute-label">Color</div>
+            <div class="attribute-value">Blue</div>
+
+            <div class="attribute-label">Size</div>
+            <div class="attribute-value">Medium</div>
+
+            <div class="attribute-label">Quantity</div>
+            <div class="attribute-value">4</div>
+          </div>
+
+          <div class="product-actions">
+            <div class="product-price">$58.00</div>
+            <button class="p-button">Button</button>
+            <div class="wishlist-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
