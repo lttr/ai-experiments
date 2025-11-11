@@ -1,0 +1,8 @@
+:root {
+  --font-family-body: "Inter", sans-serif;
+}
+
+body {
+  /* For Nuxt Fonts module to pick up the font automatically */
+  font-family: "Inter";
+}
