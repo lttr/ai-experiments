@@ -2,6 +2,11 @@
   <div class="product-list">
     <h2>Products</h2>
 
+    <nav class="filters">
+      <NuxtLink to="/?priceFrom=10&priceTo=40" class="filter-link">Filter $10-$40</NuxtLink>
+      <NuxtLink to="/" class="filter-link">Reset filter</NuxtLink>
+    </nav>
+
     <div v-if="pending" class="loading">Loading products...</div>
 
     <div v-else-if="error" class="error">
@@ -54,6 +59,39 @@ const { data, pending, error } = await useFetch('/api/products', {
 
 .error {
   color: var(--red-6);
+}
+
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.75rem;
+  background: var(--surface-2);
+  border-radius: var(--radius-2);
+}
+
+.filter-link {
+  padding: 0.5rem 1rem;
+  background: var(--surface-1);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius-2);
+  color: var(--text-1);
+  text-decoration: none;
+  font-size: var(--font-size-0);
+  font-weight: var(--font-weight-4);
+  transition: all 0.2s ease;
+}
+
+.filter-link:hover {
+  background: var(--surface-2);
+  border-color: var(--indigo-5);
+  box-shadow: var(--shadow-2);
+}
+
+.filter-link.router-link-active {
+  background: var(--indigo-6);
+  color: var(--surface-1);
+  border-color: var(--indigo-6);
 }
 
 .products {
