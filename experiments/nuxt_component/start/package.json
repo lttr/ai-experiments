@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@lttr/nuxt-puleo": "^0.0.8",
+    "@nuxt/fonts": "^0.12.1",
     "typescript": "^5.7.3"
   }
 }
