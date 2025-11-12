@@ -78,6 +78,7 @@ const { data, pending, error } = await useFetch("/api/products", {
   padding: 0.75rem;
   background: var(--surface-2);
   border-radius: var(--radius-2);
+  max-width: fit-content;
 }
 
 .filter-link {
