@@ -4,7 +4,15 @@ export default defineEventHandler(async (event) => {
   const priceTo = query.priceTo ? Number(query.priceTo) : undefined
 
   // Fetch products from dummyjson.com
-  const response = await $fetch<{ products: Array<{ id: number; title: string; price: number; thumbnail: string; description: string }> }>('https://dummyjson.com/products?limit=100')
+  const response = await $fetch<{
+    products: Array<{
+      id: number
+      title: string
+      price: number
+      thumbnail: string
+      description: string
+    }>
+  }>("https://dummyjson.com/products?limit=100")
 
   let products = response.products
 

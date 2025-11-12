@@ -3,7 +3,9 @@
     <h2>Products</h2>
 
     <nav class="filters">
-      <NuxtLink to="/?priceFrom=10&priceTo=40" class="filter-link">Filter $10-$40</NuxtLink>
+      <NuxtLink to="/?priceFrom=10&priceTo=40" class="filter-link"
+        >Filter $10-$40</NuxtLink
+      >
       <NuxtLink to="/" class="filter-link">Reset filter</NuxtLink>
     </nav>
 
@@ -18,8 +20,16 @@
     </div>
 
     <ul v-else class="products">
-      <li v-for="product in data?.products" :key="product.id" class="product-card">
-        <img :src="product.thumbnail" :alt="product.title" class="product-image" />
+      <li
+        v-for="product of data?.products"
+        :key="product.id"
+        class="product-card"
+      >
+        <img
+          :src="product.thumbnail"
+          :alt="product.title"
+          class="product-image"
+        />
         <h3 class="product-title">{{ product.title }}</h3>
         <p class="product-price">${{ product.price.toFixed(2) }}</p>
       </li>
@@ -35,12 +45,12 @@ const priceFrom = computed(() => route.query.priceFrom as string | undefined)
 const priceTo = computed(() => route.query.priceTo as string | undefined)
 
 // Fetch products with price filtering
-const { data, pending, error } = await useFetch('/api/products', {
+const { data, pending, error } = await useFetch("/api/products", {
   query: {
     priceFrom,
-    priceTo
+    priceTo,
   },
-  watch: [priceFrom, priceTo]
+  watch: [priceFrom, priceTo],
 })
 </script>
 
@@ -86,12 +96,6 @@ const { data, pending, error } = await useFetch('/api/products', {
   background: var(--surface-2);
   border-color: var(--surface-4);
   box-shadow: var(--shadow-2);
-}
-
-.filter-link.router-link-active {
-  background: var(--surface-3);
-  color: var(--text-color-1);
-  border-color: var(--surface-4);
 }
 
 .products {

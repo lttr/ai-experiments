@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@lttr/nuxt-puleo", "@nuxt/fonts", "@vueuse/nuxt"],
+  modules: ["@lttr/nuxt-puleo", "@nuxt/fonts", "@vueuse/nuxt", "@nuxt/eslint"],
   css: ["~/assets/css/main.css"],
   compatibilityDate: "2025-01-15",
   devtools: { enabled: true },
