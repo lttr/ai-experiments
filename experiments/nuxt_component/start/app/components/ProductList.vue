@@ -84,14 +84,14 @@ const { data, pending, error } = await useFetch('/api/products', {
 
 .filter-link:hover {
   background: var(--surface-2);
-  border-color: var(--indigo-5);
+  border-color: var(--surface-4);
   box-shadow: var(--shadow-2);
 }
 
 .filter-link.router-link-active {
-  background: var(--indigo-6);
-  color: var(--surface-1);
-  border-color: var(--indigo-6);
+  background: var(--surface-3);
+  color: var(--text-color-1);
+  border-color: var(--surface-4);
 }
 
 .products {
@@ -108,7 +108,7 @@ const { data, pending, error } = await useFetch('/api/products', {
   border: 1px solid var(--gray-4);
   border-radius: var(--radius-2);
   padding: 0.75rem;
-  background: var(--gray-0);
+  background: var(--surface-0);
   box-shadow: var(--shadow-2);
   transition: all 0.2s ease;
   cursor: pointer;
@@ -119,7 +119,7 @@ const { data, pending, error } = await useFetch('/api/products', {
 .product-card:hover {
   box-shadow: var(--shadow-4);
   transform: translateY(-2px);
-  border-color: var(--indigo-4);
+  border-color: var(--gray-6);
 }
 
 .product-image {
@@ -140,7 +140,7 @@ const { data, pending, error } = await useFetch('/api/products', {
 .product-price {
   font-size: var(--font-size-1);
   font-weight: var(--font-weight-7);
-  color: var(--indigo-7);
+  color: var(--text-color-1);
   margin-top: auto;
   text-align: right;
 }
