@@ -14,7 +14,8 @@ products by price range.
   dataset.
 - The picker should contain two inputs for entering the minimum and maximum
   price manually.
-- All elements should be focusable and keyboard accessible.
+- All elements should be focusable and keyboard accessible. Thumbs has to be
+  visible all the time. Do not cover them and do not overlap them with each other.
 - The steps (when user hits up or down arrows) should be sensible, not too small
   or too large.
 - Do not allow to move the left thumb past the minimum price or past the right
