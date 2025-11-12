@@ -1,37 +1,51 @@
 # Description
 
-Price picker component typically used in e-commerce websites for filtering
-products by price range.
+Price picker component typically used in e-commerce websites for filtering products by price range.
 
 # Requirements
 
-- Make the picker small so that if fits into a future filters aside.
-- The picker should have a slider with two thumbs for setting the minimum and
-  maximum price.
-- The minimum price should equal to the minimum price that occurs in the
-  dataset.
-- The maximum price should equal to the maximum price that occurs in the
-  dataset.
-- The picker should contain two inputs for entering the minimum and maximum
-  price manually.
-- All elements should be focusable and keyboard accessible. Thumbs has to be
-  visible all the time. Do not cover them and do not overlap them with each other.
-- When the thumbs are right next to each other the price range should be at a
-  single value. E.g. if the minimum price is 10 and the left thumb is on the far
-  left and the right thumb just next to it, the price range should be from 10 to
-  to.
-- The steps (when user hits up or down arrows) should be sensible, not too small
-  or too large.
-- Do not allow to move the left thumb past the minimum price or past the right
-  slider. Don't allow to move the right thumb past the maximum price or past the
-  left thumb.
+## Layout
 
-# Technical notes
+- Make the picker small so it fits into a future filters aside
+- Should work within limited space: around 240px wide and 160px high
 
-Prefer more than one component: a dumb component for the price picker and a
-smart component for communication with the rest of the application.
+## Slider Behavior
 
-The smart component should be responsible for setting query parameters,
-essentially doing a navigation.
+- Dual thumb slider for setting minimum and maximum price
+- Left thumb controls minimum price, right thumb controls maximum price
+- **No thumb overlap**: Left thumb can never move past or over the right thumb
+- **Both thumbs always visible**: Never hide or obscure either thumb
+- Thumbs can be at the same position logically (allowing ranges like $50 to $50), but visually they will be side by side in such position
+- Visual indicator shows selected range between thumbs
+
+## Price Range
+
+- Minimum and maximum bounds come from the **complete dataset**
+- Price scale stays constant - never recalculates when filtering products
+- Users can select any range within the dataset's min/max bounds
+
+## Number Inputs
+
+- Two inputs for manually entering min and max prices
+- Inputs enforce the same rules as sliders (min ≤ max)
+- Invalid inputs reset to valid values when user leaves the field
+
+## Accessibility
+
+- All controls can be focused with keyboard
+- Slider thumbs respond to arrow keys
+- Clear visual focus indicators on all interactive elements
+
+## Price Display
+
+- Show prices as whole dollars (e.g., $10, not $10.00)
+- Steps should be sensible - not too small or too large based on the price range
+
+# Technical Notes
+
+- Separate "dumb" component for the UI (reusable price picker)
+- Separate "smart" component for managing filters and navigation
+- Smart component handles URL query parameters
+- Use debouncing to avoid excessive URL updates
 
 Use PuleoCSS for styling. Use idiomatic Nuxt and Vue components.
