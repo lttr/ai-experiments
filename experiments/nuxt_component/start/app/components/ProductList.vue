@@ -96,11 +96,12 @@ const { data, pending, error } = await useFetch('/api/products', {
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 0.5rem;
   list-style: none;
   padding: 0;
   margin: 0.5rem 0;
+  max-width: calc((160px * 5) + (0.5rem * 4));
 }
 
 .product-card {
@@ -111,6 +112,8 @@ const { data, pending, error } = await useFetch('/api/products', {
   box-shadow: var(--shadow-2);
   transition: all 0.2s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
@@ -129,15 +132,16 @@ const { data, pending, error } = await useFetch('/api/products', {
 }
 
 .product-title {
-  font-size: var(--font-size-00);
+  font-size: var(--font-size-0);
   font-weight: var(--font-weight-4);
   margin: 0 0 0.25rem 0;
 }
 
 .product-price {
-  font-size: var(--font-size-00);
-  font-weight: var(--font-weight-4);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-7);
   color: var(--indigo-7);
-  margin: 0.25rem 0 0 0;
+  margin-top: auto;
+  text-align: right;
 }
 </style>
