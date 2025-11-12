@@ -16,6 +16,10 @@ products by price range.
   price manually.
 - All elements should be focusable and keyboard accessible. Thumbs has to be
   visible all the time. Do not cover them and do not overlap them with each other.
+- When the thumbs are right next to each other the price range should be at a
+  single value. E.g. if the minimum price is 10 and the left thumb is on the far
+  left and the right thumb just next to it, the price range should be from 10 to
+  to.
 - The steps (when user hits up or down arrows) should be sensible, not too small
   or too large.
 - Do not allow to move the left thumb past the minimum price or past the right
