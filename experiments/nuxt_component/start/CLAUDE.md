@@ -8,6 +8,8 @@ Nuxt 4 application demonstrating product filtering with Puleo CSS design system.
 
 ## Development Commands
 
+NOTE: The dev server is already running at http://localhost:3000
+
 ```bash
 pnpm dev           # Start dev server
 pnpm build         # Build for production
